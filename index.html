@@ -100,7 +100,7 @@
 				<form method="post" action="">
 					<div class="row">
 						<div class="medium-8 medium-offset-2 columns end">
-							<textarea name="" id="" class="textarea din-medium font-16 italic" placeholder="Rédigez votre petit mot ici"></textarea>
+							<textarea name="contenu" id="" class="textarea din-medium font-16 italic" placeholder="Rédigez votre petit mot ici"></textarea>
 						</div>
 					</div>
 					<div class="row">
@@ -120,7 +120,7 @@
 					</div>
 					<div class="row">
 						<div class="medium-6 medium-offset-3 columns end">
-							<select name="" id="" class="select din-regular font-16">
+							<select name="nombre de messages" id="" class="select din-regular font-16">
 								<option value="1">1 message par an (Noël)</option>
 								<option value="2">2 messages par an (Noël &amp; été)</option>
 								<option value="3">3 messages par an (Noël, été &amp; fleurs de la fraternité)</option>
@@ -129,9 +129,10 @@
 					</div>
 					<div class="row">
 						<div class="large-6 large-offset-3 columns end row-margin text-center">
-							<input type="checkbox" name="" id="" value="" class="checkbox" /> Me le rappeler aussi par SMS : <input type="text" name="" id="" value="" placeholder="Téléphone" class="input" />
+							<input type="checkbox" name="" id="" value="" class="checkbox" /> Me le rappeler aussi par SMS : <input type="text" name="tel" id="" value="" placeholder="Téléphone" class="input" />
 						</div>
 					</div>
+                    <input type="hidden" name="cc_emails[]" value="amasselin@adfinitas.fr" />
 					<div class="row row-margin-bottom">
 						<div class="medium-4 medium-offset-4 columns end text-center">
 							<div class="errors din-medium font-16"></div>
