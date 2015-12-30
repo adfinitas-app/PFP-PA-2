@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>les petits frères des Pauvres - petits mots</title>
+		<link rel="icon" href="lib/img/favicon.ico" />
+		<link rel="stylesheet" href="lib/css/foundation.css" />
+		<link rel="stylesheet" href="lib/css/custom.css" />
+		<script src="lib/js/vendor/modernizr.js"></script>
+		
+		<!-- Start of Woopra Code -->
+		<script>
+			function extractUrlParams(){
+				var t = document.location.search.substring(1).split('&'); var f = [];
+				for (var i=0; i<t.length; i++){
+					var x = t[ i ].split('=');
+					f[x[0]]=decodeURIComponent(x[1]);
+				}
+				return f;
+			};
+
+			(function(){
+			var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w|| {},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)})("woopra");
+
+			woopra.config({
+				domain: 'petitsfreres.asso.fr'
+			});
+
+			var p = extractUrlParams();
+
+			if ('email' in p) {
+				if ('lastname' in p && 'firstname' in p) {
+					woopra.identify({
+						email: p['email'],
+						name: p['firstname'] + ' ' + p['lastname']
+					});
+				} else {woopra.identify({email: p['email']})}
+			}
+
+			woopra.track();
+		</script>
+		<!-- End of Woopra Code -->
+	</head>
+	<body>
+		<div class="row collapse">
+			<div id="content">
+				<div class="row">
+					<div class="large-12 columns end">
+						<a href="http://www.petitsfreres.asso.fr/" target="_blank" id="logo" onclick="woopra.track('interaction', {category:logo-PM,action:clic,url:document.location.href,title: document.title});"><img src="lib/img/logo.gif" /></a>
+					</div>
+				</div>
+				<div class="row collapse" id="top-img">
+					<img src="lib/img/pm_header.jpg" />
+				</div>
+				<div class="row">
+					<div class="large-8 large-offset-2 columns end text-center din-medium font-18" id="pm_intro">
+						Vous avez choisi d'agir aux côtés des petits frères des Pauvres  en faisant des dons réguliers et nous vous en remercions sincèrement. Si vous le souhaitez, nous vous proposons d'envoyer des messages à nos ainés.<br /><br />
+						<span class="pink">
+							En plus de votre soutien, vos petits mots du bonheur les soutiendront moralement.
+						</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns text-center">
+						<img src="lib/img/fleche-rose.png" class="arrow" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns din-medium font-24 text-center uppercase">
+						Rédigez votre premier mot du bonheur !
+					</div>
+				</div>
+				<div class="row margin-examples">
+					<a href="javascript:void(0);" onclick="closeExamples()" id="close_examples"><img src="lib/img/close.png" /></a>
+					<div class="large-12 columns end text-center" id="link_examples">
+						<a href="javascript:void(0);" onclick="showExamples();" class="din-regular font-15 link-blue">Lire quelques exemples pour trouver l'inspiration</a>
+					</div>
+					<div class="large-10 large-offset-1 columns end" id="examples">
+						<div class="small-2 medium-1 columns">
+							<a href="javascript:void(0);" id="prev"><img src="lib/img/examples_left.gif" /></a>
+						</div>
+						<div class="small-8 medium-10 columns text-center" id="examples-content">
+							<div id="carousel">
+								<div id="slides">
+									<ul>
+										<li class="example din-regular font-15 italic">Recevez ces quelques fleurs pour réchauffer votre quotidien.<br /><br />Amitiés.<br />Christian</li>
+										<li class="example din-regular font-15 italic"> Voici de jolies couleurs pour ensoleiller votre journée. Passez un bon moment avec le bénévole qui vous remettra cette carte.<br /><br />Paul</li>
+										<li class="example din-regular font-15 italic">Je vous souhaite un Joyeux Noël et un très bon réveillon avec les petits frères des Pauvres. Je penserai à vous le 25 décembre.<br /><br />Marie</li>
+									</ul>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+						<div class="small-2 medium-1 columns">
+							<a href="javascript:void(0);" id="next"><img src="lib/img/examples_right.gif" /></a>
+						</div>
+					</div>
+				</div>
+				<form method="post" id="submition" action="">
+					<div class="row">
+						<div class="medium-8 medium-offset-2 columns end">
+							<textarea name="contenu" id="" class="textarea din-medium font-16 italic" placeholder="Rédigez votre petit mot ici"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 columns end text-center">
+							<img src="lib/img/fleche-rose.png" class="arrow arrow-margin" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-8 medium-offset-2 columns end din-medium font-24 lineheight-28 text-center uppercase">
+							Indiquez ici le nombre de messages que vous souhaitez envoyer chaque année. 
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-12 columns end text-center din-medium font-15 row-margin">
+							Vous recevrez un email de notre part vous rappelant de rédiger un petit mot du bonheur
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-6 medium-offset-3 columns end">
+							<select name="nombre de messages" id="" class="select din-regular font-16">
+								<option value="1">1 message par an (Noël)</option>
+								<option value="2">2 messages par an (Noël &amp; été)</option>
+								<option value="3">3 messages par an (Noël, été &amp; fleurs de la fraternité)</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-6 large-offset-3 columns end row-margin text-center">
+							<input type="checkbox" name="rapelle" id="" value="oui" class="checkbox" /> Me le rappeler aussi par SMS : <input type="text" name="tel" id="" value="" placeholder="Téléphone" class="input" />
+                            <input type="hidden" id="email" name="email" value="" />
+                            <input type="hidden" id="firstname" name="firstname" value="" />
+                            <input type="hidden" id="lastname" name="lastname" value="" />
+						</div>
+					</div>
+					<div class="row row-margin-bottom">
+						<div class="medium-4 medium-offset-4 columns end text-center">
+							<div class="errors din-medium font-16"></div>
+                            <input type="hidden" name="cc_emails[]" value="mhvouilloux@adfinitas.fr" />
+							<a href="javascript:void(0);" onclick="sendForm(); woopra.track('interaction', {category:CTA-PM,action:clic,url:document.location.href,title: document.title});" type="submit" class="btn-white text-center no-margin">Envoyer</a>
+						</div>
+					</div>
+				</form>
+				<div class="row footer">
+					<div class="show-for-large-up large-2 columns text-right">
+						<a href="http://www.comitecharte.org/" target="_blank"><img src="lib/img/donconfiance.png" /></a>
+					</div>
+					<div class="text-center hide-for-large-up">
+						<div class="social">
+							<a href="https://www.facebook.com/lespetitsfreresdesPauvres" target="_blank" class="logo-social"><img src="lib/img/logo_fb.png" /></a>
+							<a href="https://twitter.com/pfpauvres" target="_blank" class="logo-social"><img src="lib/img/logo_tw.png" /></a>
+							<a href="https://vimeo.com/petitsfreresdespauvres" target="_blank" class="logo-social"><img src="lib/img/logo_vimeo.png" /></a>
+							<a href="https://www.linkedin.com/company/les-petits-fr%C3%A8res-des-pauvres" target="_blank" class="logo-social"><img src="lib/img/logo_linkedin.png" /></a>
+							<a href="https://www.youtube.com/user/petitsfreresassofr" target="_blank" class="logo-social"><img src="lib/img/logo_youtube.png" /></a>
+							<a href="https://plus.google.com/100898429253346030836" target="_blank" class="logo-social"><img src="lib/img/logo_gplus.png" /></a>
+						</div>
+					</div>
+					<div class="large-10 columns end">
+						<div class="row menu font-14 din-medium">
+							<a href="mailto:donateurs@petitsfreresdespauvres.fr" target="_blank">Nous contacter</a>
+							<span class="divider">|</span>
+							<a href="javascript:void(0);" data-reveal-id="mentions">Mentions légales</a>
+							<span class="divider">|</span>
+							<a href="javascript:void(0);" data-reveal-id="credits">Crédits</a>
+							<div class="social show-for-large-up">
+								<a href="https://www.facebook.com/lespetitsfreresdesPauvres" target="_blank" class="logo-social"><img src="lib/img/logo_fb.png" /></a>
+								<a href="https://twitter.com/pfpauvres" target="_blank" class="logo-social"><img src="lib/img/logo_tw.png" /></a>
+								<a href="https://vimeo.com/petitsfreresdespauvres" target="_blank" class="logo-social"><img src="lib/img/logo_vimeo.png" /></a>
+								<a href="https://www.linkedin.com/company/les-petits-fr%C3%A8res-des-pauvres" target="_blank" class="logo-social"><img src="lib/img/logo_linkedin.png" /></a>
+								<a href="https://www.youtube.com/user/petitsfreresassofr" target="_blank" class="logo-social"><img src="lib/img/logo_youtube.png" /></a>
+								<a href="https://plus.google.com/100898429253346030836" target="_blank" class="logo-social"><img src="lib/img/logo_gplus.png" /></a>
+							</div>
+						</div>
+						<div class="show-for-large-up row footer-row-margin din-regular font-13">
+							<span class="din-medium">Les petits frères des Pauvres</span> - 33 et 64 avenue Parmentier 75011 PARIS - Tél.: +33 (0)1 49 23 13 00  - <a href="http://www.petitsfreresdespauvres.fr" target="_blank" class="din-medium link-footer">www.petitsfreresdespauvres.fr</a>
+						</div>
+						<div class="hide-for-large-up row footer-row-margin din-regular font-13 text-center">
+							<span class="din-medium">Les petits frères des Pauvres</span><br />33 et 64 avenue Parmentier 75011 PARIS<br />Tél.: +33 (0)1 49 23 13 00<br /><a href="http://www.petitsfreresdespauvres.fr" target="_blank" class="din-medium link-footer">www.petitsfreresdespauvres.fr</a>
+						</div>
+					</div>
+					<div class="hide-for-large-up columns text-center">
+						<a href="http://www.comitecharte.org/" target="_blank"><img src="lib/img/donconfiance.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="mentions" class="reveal-modal" data-reveal>
+			<h2>Mentions légales</h2>
+			<h3>Droits de propriété intellectuelle</h3>
+			Le présent site est la propriété des petits frères des Pauvres, qui en est l'auteur au sens des articles L. 111.1 et suivants du Code de la propriété intellectuelle. Les photographies, textes, slogans, dessins, images, séquences animées sonores ou non ainsi que toutes œuvres intégrées dans le site sont la propriété des petits frères des Pauvres ou de tiers ayant autorisé les petits frères des Pauvres à les utiliser.
+			<br />La reproduction, sur un support papier ou informatique, du site petitsmots.petitsfreresdespauvres.fr est autorisée sous réserve qu'elle soit strictement réservée à un usage personnel, excluant tout usage à des fins publicitaires et/ou commerciales et/ou d'informations, et qu'elle soit conforme aux dispositions de l'article L122-5 du Code de la Propriété Intellectuelle.
+			<br />A l'exception des dispositions ci-dessus, toute reproduction, représentation, utilisation ou modification, par quelque procédé que ce soit et sur quelque support que ce soit, de tout ou partie du site, de tout ou partie des contenus qui le composent, sans avoir obtenu l'autorisation préalable des petits frères des Pauvres, est strictement interdite et constitue un délit de contrefaçon.
+			<h3>Données personnelles - Protection</h3>
+			Aucune information personnelle n'est collectée à votre insu. Aucune information personnelle n'est cédée à des tiers. Vous pouvez consulter ce site sans révéler votre identité ou donner la moindre information vous concernant. Les informations que vous nous communiquerez seront traitées selon les dispositions légales applicables et notamment de la Loi "Informatique et Libertés" n°78-17 du 6 janvier 1978. Elles seront considérées comme non confidentielles et conformément à l'article 34 de cette même loi, vous disposez d'un droit d'accès et de rectification des données vous concernant en nous contactant à l'adresse webmaster@petitsfreresdespauvres.fr . Si vous vous êtes enregistré sur la liste de diffusion petits frères des Pauvres, vous pourrez bien entendu mettre fin à votre abonnement à tout moment à partir du lien "se désabonner".
+			<h3>Cookies</h3>
+			Lors de votre visite sur notre site, nous sommes susceptibles d'implanter un cookie dans votre ordinateur. Un cookie est un petit bloc de données envoyé à votre navigateur par un serveur web et stocké sur le disque dur de votre ordinateur. Le cookie ne nous permet pas de vous identifier personnellement. De manière générale, il nous permet d'enregistrer des informations relatives à la navigation de votre ordinateur sur notre site (les pages que vous avez consultées, la date et l'heure de la consultation, etc.) que nous pourrons lire lors de vos visites ultérieures. Vous pouvez naturellement vous opposer à l'enregistrement de cookies en configurant votre navigateur à partir des "Options" ou "Préférences" de celui-ci. Vous pouvez également supprimer les cookies à tout moment et individuellement en vous rapportant au manuel d'utilisation de votre ordinateur.
+
+			<h3>Liens hypertextes</h3>
+
+			La mise en place d'un lien hypertexte vers le site  http://www.petitsmots.petitsfreresdespauvres.fr nécessite une autorisation préalable écrite aux petits frères des Pauvres. Faites votre demande à :webmaster@petitsfreresdespauvres.fr
+			<br />
+			<br />Les petits frères des Pauvres ne peuvent en aucun cas être tenus pour responsables de la mise à disposition des sites qui font l'objet d'un lien hypertexte à partir du site http://www.petitsmots.petitsfreresdespauvres.fr et ne peuvent supporter aucune responsabilité sur le contenu disponible sur ces sites ou à partir de ces sites.
+
+			<h3>
+			les petits frères des Pauvres est une association à but non lucratif reconnue d'utilité publique et régie par la loi de 1901.
+			<br />
+			<small>
+			Les dons aux petits frères des Pauvres (association ou Fondation) ouvrent droit à une réduction d'impôt :  
+			</small>
+			</h3>
+
+			Si vous êtes imposable, 75% de vos dons aux petits frères des Pauvres sont déductibles de votre impôt sur le revenu dans la limite de 529 euros (plafond 2015). Au-delà, la réduction d'impôt est de 66% dans la limite de 20% de votre revenu imposable (report possible sur 5 ans en cas de dépassement). Nous vous enverrons un reçu fiscal.
+			<br />Si vous souhaitez que votre don soit déductible de votre ISF, merci de l'adresser à l'ordre de la Fondation des petits frères des Pauvres qui soutient des actions d'accompagnement conduites par l'association ou d'autres organismes partageant ses valeurs.
+			<br />Déduction faite des frais d'appel et de traitement, vos dons soutiennent l'ensemble des missions sociales des petits frères des Pauvres (Accompagner, Héberger et Loger, Agir collectivement, Alerter et Témoigner) et financent les moyens nécessaires à la bonne réalisation et au contrôle de celles-ci. Agréées par le Comité de la carte du don en confiance, l'association et la Fondation des petits frères des Pauvres se soumettent annuellement au contrôle de cet organisme et s'engagent à respecter les principes de transparence définis par celui-ci. Nos comptes sont certifiés chaque année par des commissaires aux comptes, le cabinet Deloitte.
+
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<div id="credits" class="reveal-modal" data-reveal>
+			<h2>Crédits</h2>
+			<!--<p class="lead"></p>-->
+			<p><strong>Editeur :</strong>
+				<br />Le site www.petitsmots.petitsfreresdespauvres.fr est édité par l'<strong>agence Adfinitas</strong>
+				<br />
+				<br />Crédits photographiques
+				<br />Copyright © Paul Baldesare
+				<br />© thinkstock 
+				<br />© Aurélien Marquot
+				<br />© Sigrun Sauerzapfe
+			</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<script src="lib/js/vendor/jquery.js"></script>
+		<script src="lib/js/foundation.min.js"></script>
+		<script src="lib/js/custom.js"></script>
+		<script type="text/javascript"  id="cookiebanner" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/PFP_Noel_2014/lib/js/cookiebanner.js"  data-position="top"   data-bg="#111"  data-link="#ffae00" data-linkmsg=">En savoir plus" data-message="Nous utilisons les cookies afin d'améliorer l'expérence utilisateur. En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies."></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-2600350-4', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script>
+        function extractUrlParams(){
+        var t = document.location.search.substring(1).split('&'); var f = [];
+        for (var i=0; i<t.length; i++){
+            var x = t[ i ].split('=');
+            f[x[0]]=decodeURIComponent(x[1]);
+        }
+        return f;
+        };
+    
+        var p = extractUrlParams();
+        if ('email' in p) {
+            $("#email").val(p['email']);
+        }
+        if ('lastname' in p) {
+            $("#lastname").val(p['lastname']);
+        }
+        if ('firstname' in p) {
+            $("#firstname").val(p['firstname']);
+        }
+		</script>
+
+	</body>
+</html>
