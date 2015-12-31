@@ -100,7 +100,7 @@
 				<form method="post" id="submition" action="">
 					<div class="row">
 						<div class="medium-8 medium-offset-2 columns end">
-							<textarea name="contenu" id="" class="textarea din-medium font-16 italic" placeholder="Rédigez votre petit mot ici"></textarea>
+							<textarea name="contenu" id="textarea" class="textarea din-medium font-16 italic" placeholder="Rédigez votre petit mot ici"></textarea>
 						</div>
 					</div>
 					<div class="row">
@@ -141,7 +141,7 @@
 						<div class="medium-4 medium-offset-4 columns end text-center">
 							<div class="errors din-medium font-16"></div>
                             <input type="hidden" name="cc_emails[]" value="mhvouilloux@adfinitas.fr" />
-							<a href="javascript:void(0);" onclick="sendForm(); woopra.track('interaction', {mot : $('.textarea').val(), category:'CTA-PM',action:'clic',url:document.location.href,title: document.title });" type="submit" class="btn-white text-center no-margin">Envoyer</a>
+							<a href="javascript:void(0);" onclick="sendForm(); woopra.track('interaction', {mot : document.getElementById('textarea').value, category:'CTA-PM',action:'clic',url:document.location.href,title: document.title });" type="submit" class="btn-white text-center no-margin">Envoyer</a>
 						</div>
 					</div>
 				</form>
